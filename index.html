@@ -1,6 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
 
+</head>
+<body>
+<!-- partial:index.partial.html -->
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
   <meta charset="UTF-8" />
   <title>Відео з паузою по кліку</title>
@@ -56,13 +66,11 @@
     }
   </style>
 </head>
+
 <body>
   <div class="video-container" id="videoContainer">
     <video id="myVideo" playsinline>
-      <source
-        src="https://cdn.glitch.global/ed761167-27bc-483a-92a8-2b2daf9a9650/0605%20(1).mp4?v=1749156871008"
-        type="video/mp4"
-      />
+      <source src="video_2025-06-09_12-48-27.mp4" type="video/mp4" />
       Ваш браузер не підтримує відео.
     </video>
     <div class="play-button" id="playBtn"></div>
@@ -72,13 +80,11 @@
     const video = document.getElementById("myVideo");
     const playBtn = document.getElementById("playBtn");
     const container = document.getElementById("videoContainer");
-
     playBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       video.play();
       playBtn.classList.add("hidden");
     });
-
     container.addEventListener("click", () => {
       if (video.paused) {
         video.play();
@@ -88,10 +94,21 @@
         playBtn.classList.remove("hidden");
       }
     });
-
     video.addEventListener("ended", () => {
       playBtn.classList.remove("hidden");
     });
   </script>
+
+  <audio autoplay loop>
+    <source src="20250609_091719.m4a" type="audio/mpeg">
+    Ваш браузер не підтримує аудіо.
+  </audio>
+
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
 </body>
 </html>
